@@ -54,9 +54,13 @@ console.log("redirectTo",redirectTo)
         value={localMobile}
         onChange={handleChange}
       />
-      <Button onClick={handleNext} disabled={!localMobile}>
+      
+
+      <div style={{display:"flex",gap:'10px'}}>
+      <Button variant="contained" onClick={handleNext} disabled={!localMobile}>
         Next
       </Button>
+              </div>
       </div>
     </div></div>
     </div></div>

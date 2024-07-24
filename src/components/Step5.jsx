@@ -21,6 +21,10 @@ const Step5 = () => {
       navigate('/login'); // Navigate to the login page
     }
   };
+  const handlePrevious = () => {
+    navigate('/step4'); // Navigate to the previous step, adjust the route as necessary
+  };
+
 
   return (
     <div className='container'>
@@ -38,7 +42,15 @@ const Step5 = () => {
         }
         label="I agree to the terms and conditions"
       />
-      <Button onClick={handleFinish} disabled={!termsAgreed}>
+      
+
+      <div style={{display:"flex",gap:'10px'}}>
+              <Button variant="contained" onClick={handlePrevious}>
+                Previous
+                
+      </Button>
+      </div>
+      <Button variant="contained" onClick={handleFinish} disabled={!termsAgreed}>
         Finish
       </Button>
       </div>

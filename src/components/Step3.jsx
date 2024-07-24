@@ -17,6 +17,9 @@ const Step3 = () => {
      navigateTo('/step4')
     }
   };
+  const handlePrevious = () => {
+    navigateTo('/step2'); // Navigate to the previous step, adjust the route as necessary
+  };
 
   return (
     <div className='container'>
@@ -37,9 +40,16 @@ const Step3 = () => {
         onChange={(e) => dispatch(updateForm('pan', e.target.value))}
       />
       {/* Document upload can be handled with a file input component */}
-      <Button onClick={handleNext} disabled={!aadhar || !pan}>
+     
+      <div style={{display:"flex",gap:'10px'}}>
+              <Button variant="contained" onClick={handlePrevious}>
+                Previous
+              </Button>
+              <Button  variant="contained" onClick={handleNext} disabled={!aadhar || !pan}>
         Next
       </Button>
+
+              </div>
       </div>
     </div></div>
     </div></div>

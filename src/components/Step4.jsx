@@ -18,6 +18,10 @@ const Step4 = () => {
 
     }
   };
+  const handlePrevious = () => {
+    navigateTo('/step3'); // Navigate to the previous step, adjust the route as necessary
+  };
+
 
   return (
     <div className='container'>
@@ -41,9 +45,16 @@ const Step4 = () => {
         value={ifsc}
         onChange={(e) => dispatch(updateForm('ifsc', e.target.value))}
       />
-      <Button onClick={handleNext} disabled={!bankAccount || !bankName || !ifsc}>
+      
+
+      <div style={{display:"flex",gap:'10px'}}>
+              <Button variant="contained" onClick={handlePrevious}>
+                Previous
+              </Button>
+              <Button  variant="contained" onClick={handleNext} disabled={!bankAccount || !bankName || !ifsc}>
         Next
       </Button>
+      </div>
       </div>
     </div></div>
     </div></div>
