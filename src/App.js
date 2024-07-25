@@ -43,6 +43,8 @@ function App() {
       <Route path="/step4" element={<Step4 />} />
       <Route path="/step5" element={<Step5 />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="*" element={<Navigate to="/step1" replace />} />
+
       {/* Redirect to the correct step or default to /step1 */}
       {/* <Route path="*" element={<Navigate to={redirectTo} />} /> */}
     </Routes>
